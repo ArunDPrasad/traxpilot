@@ -1,0 +1,113 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 220 15% 5%; /* Very dark (near black) blue-ish gray */
+    --foreground: 0 0% 90%; /* Light gray for text, not pure white for better eye comfort */
+
+    --card: 220 15% 10%; /* Slightly lighter dark blue-ish gray for cards */
+    --card-foreground: 0 0% 90%;
+
+    --popover: 220 15% 9%; /* Dark popover background */
+    --popover-foreground: 0 0% 90%;
+
+    --primary: 210 90% 60%; /* Vibrant blue for primary actions */
+    --primary-foreground: 220 15% 5%; /* Dark text on primary buttons */
+
+    --secondary: 220 15% 20%; /* Mid-dark gray for secondary elements */
+    --secondary-foreground: 0 0% 90%; /* Light text on secondary elements */
+
+    --muted: 220 15% 15%; /* Darker gray for muted elements */
+    --muted-foreground: 220 10% 55%; /* Muted text color, lighter gray */
+
+    --accent: 210 80% 65%; /* Slightly lighter/brighter blue for accent */
+    --accent-foreground: 220 15% 5%; /* Dark text on accent */
+
+    --destructive: 0 70% 55%; /* A noticeable red for dark themes */
+    --destructive-foreground: 0 0% 98%; /* Light text on destructive elements */
+
+    --border: 220 15% 20%; /* Dark border color */
+    --input: 220 15% 15%; /* Dark input background */
+    --ring: 210 90% 60%; /* Ring color based on primary */
+
+    --radius: 0.5rem;
+
+    /* Chart colors for the dark theme */
+    --chart-1: hsl(var(--primary)); /* Blue */
+    --chart-2: 170 70% 50%; /* Teal */
+    --chart-3: 280 70% 65%; /* Purple */
+    --chart-4: 35 85% 60%;  /* Orange */
+    --chart-5: 90 60% 50%; /* Green */
+
+    /* Sidebar specific colors - ensuring consistency with dark theme */
+    --sidebar-background: 220 20% 8%; /* Consistent very dark background */
+    --sidebar-foreground: 0 0% 85%; /* Light gray text for sidebar */
+    --sidebar-primary: hsl(var(--primary)); 
+    --sidebar-primary-foreground: hsl(var(--primary-foreground));
+    --sidebar-accent: 210 85% 55%; /* Accent for hover/active in sidebar */
+    --sidebar-accent-foreground: 0 0% 98%;
+    --sidebar-border: 220 15% 18%; /* Border for sidebar context */
+    --sidebar-ring: hsl(var(--ring));
+  }
+
+  /* Dark mode variables - will be same as :root for a purely dark theme */
+  .dark {
+    --background: 220 15% 5%;
+    --foreground: 0 0% 90%;
+
+    --card: 220 15% 10%;
+    --card-foreground: 0 0% 90%;
+
+    --popover: 220 15% 9%;
+    --popover-foreground: 0 0% 90%;
+
+    --primary: 210 90% 60%;
+    --primary-foreground: 220 15% 5%;
+
+    --secondary: 220 15% 20%;
+    --secondary-foreground: 0 0% 90%;
+
+    --muted: 220 15% 15%;
+    --muted-foreground: 220 10% 55%;
+
+    --accent: 210 80% 65%;
+    --accent-foreground: 220 15% 5%;
+
+    --destructive: 0 70% 55%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 220 15% 20%;
+    --input: 220 15% 15%;
+    --ring: 210 90% 60%;
+
+    --radius: 0.5rem;
+
+    /* Chart colors for dark theme */
+    --chart-1: hsl(var(--primary));
+    --chart-2: 170 70% 50%;
+    --chart-3: 280 70% 65%;
+    --chart-4: 35 85% 60%;
+    --chart-5: 90 60% 50%;
+    
+    /* Sidebar specific colors for dark theme */
+    --sidebar-background: 220 20% 8%;
+    --sidebar-foreground: 0 0% 85%;
+    --sidebar-primary: hsl(var(--primary));
+    --sidebar-primary-foreground: hsl(var(--primary-foreground));
+    --sidebar-accent: 210 85% 55%;
+    --sidebar-accent-foreground: 0 0% 98%;
+    --sidebar-border: 220 15% 18%;
+    --sidebar-ring: hsl(var(--ring));
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
